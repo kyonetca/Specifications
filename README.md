@@ -34,7 +34,7 @@ There are several message-types:
 #####"GPK": get public key
 **Parameters:**
 
-* **of:** SHA2'd mobile-number of the person you want the public key from
+* **of:** SHA-256'd mobile-number of the person you want the public key from
 
 #####"STM": send text message 
 **Parameters:**
