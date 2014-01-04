@@ -31,6 +31,12 @@ When communicating, each message is one line long. Messages are delimited by a l
 There are several message-types:
 ####From the Client:
 
+#####"REG": register the user
+**Parameters:**
+
+* **phoneNumber:** the phone number of the user. TODO: verify this?
+* **publicKey:** the publickey of the user
+
 #####"GPK": get public key
 **Parameters:**
 
