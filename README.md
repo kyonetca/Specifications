@@ -11,7 +11,7 @@ Each server stores a list of the other servers it already knows so other servers
 The Clients are just mobiles. The operating system doesn't matter as long as it provides everything necessary to implement a client. A client can open a socket to an arbitrary server which is in the network.
 
 ##Crypto
-Encryption is a really important part of DC3. Because of that, all messages, both between servers and between servers and clients are being encrypted. For that, NaCl should be used (you could use any other implementation of those algorithms but NaCl is pretty cool).
+Encryption is a really important part of DC3. Because of that, all messages, both between servers and between servers and clients are being encrypted. For that, NaCl should be used (you could use any other implementation of those algorithms but NaCl is pretty cool). To be exact, NaCl is using Curve25519 for scalar multiplication, Salsa20 for secret-key authenticated encryption and secret-key encryption and Poly1305 for one-time authentication. ([Source](http://nacl.cr.yp.to/valid.html) 4.1.14).
 
 ##Communication
 All communication is encrypted. See the Crypto-section for that. The Communication is happening via Sockets. Clients should connect to servers on port 42961. Servers communicate with each other on port 42962. Messages are JSON-Encoded.
